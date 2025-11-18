@@ -13,7 +13,7 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <div className="felx-center gap-3">
+        <div className="flex-center gap-3">
           <button>
             <img src="search.svg" alt="Search" />
           </button>
