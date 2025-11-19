@@ -21,10 +21,12 @@ export default function MacbookModel16(props) {
   const texture = useTexture("/screen.png")
 
   useEffect(() => {
-    scene.traverse((childe) => {
-      if (childe.isMesh) {
-        if (!noChangeParts.includes(childe.name)) {
-          childe.material.color = new Color(color)
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        if (!noChangeParts.includes(child.name)) {
+          if (child.material) {
+            child.material.color = new Color(color)
+          }
         }
       }
     })
